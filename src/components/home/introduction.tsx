@@ -7,18 +7,51 @@ const IntroductionStyle = styled.div`
   height: 450px;
   color: #fff;
   background-position: center;
-  background-size: cover;
   background-image: url('https://www.pakutaso.com/shared/img/thumb/MIYADSC_3425-3_TP_V.jpg');
 `
 
+const CenterDiv = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+`
+const TextField = styled.div`
+  height: 300px;
+`
+
+const IntroductionImage = styled(TextField)`
+  width: 300px;
+  border: thin solid #fff;
+  margin: 75px auto 75px;
+`
+
 const RadiusImg = styled.img`
-  width: 200px;
+  padding: 30px 80px 10px;
+  width: 140px;
   border-radius: 50%;
+`
+
+const BoldCenter = styled.p`
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+`
+
+const IntroductionData = styled(TextField)`
+  width: 900px;
+  margin: 75px 0px 75px;
+`
+
+const IntroductionMessage = styled.p`
+  word-wrap: break-word;
+`
+
+const IntroductionBasicInfo = styled.div`
 `
 
 interface People_Type {
   readonly name: {
     jp_name: string
+    katakana_name: string
     en_name: string
   }
   readonly gender: '男性' | '女性'
@@ -30,6 +63,7 @@ interface People_Type {
 const People: People_Type = {
   name: {
     jp_name: '上杉直大',
+    katakana_name: 'ウエスギ ナオヒロ',
     en_name: 'UesugiNohiro',
   },
   gender: '男性',
@@ -38,17 +72,32 @@ const People: People_Type = {
   address: '奈良県生駒市',
 }
 
+console.log(People.name.katakana_name)
+console.log(People[key].katakana_name)
+
+
 const Introduction = () => {
   return (
     <IntroductionStyle>
-      <p>{People.name.jp_name}</p>
-      <p>{People.name.en_name}</p>
-      <p>性別: {People.gender}</p>
-      <p>年齢: {People.age}</p>
-      <p>生年月日: {People.birthday}</p>
-      <p>住所: {People.address}</p>
-      <p>message,message,message,message,message,message,message,message</p>
-      <RadiusImg src={AuterImg} />
+      <CenterDiv>
+        <IntroductionImage>
+          <RadiusImg src={AuterImg} />
+          <BoldCenter>{People.name.en_name}</BoldCenter>
+        </IntroductionImage>
+        <IntroductionData>
+          <IntroductionMessage>
+            message,message,message,message,message,message,message,messagemessage,message,message,message,message,messagemessage,message,message,message,
+            message,messagemessage,message,message,message,message,message
+          </IntroductionMessage>
+          <IntroductionBasicInfo>
+            <p>{People.name.jp_name}:{People.name.katakana_name}</p>
+            <p><b>性別</b> {People.gender}</p>
+            <p><b>年齢</b> {People.age}</p>
+            <p><b>生年月日</b> {People.birthday}</p>
+            <p><b>住所</b> {People.address}</p>
+          </IntroductionBasicInfo>
+        </IntroductionData>
+      </CenterDiv>
     </IntroductionStyle>
   )
 }
