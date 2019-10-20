@@ -1,4 +1,20 @@
 import * as React from 'react'
+import styled from 'styled-components'
+
+import AuterImg from '../../images/auther.jpg'
+
+const IntroductionStyle = styled.div`
+  height: 450px;
+  color: #fff;
+  background-position: center;
+  background-size: cover;
+  background-image: url('https://www.pakutaso.com/shared/img/thumb/MIYADSC_3425-3_TP_V.jpg');
+`
+
+const RadiusImg = styled.img`
+  width: 200px;
+  border-radius: 50%;
+`
 
 interface People_Type {
   readonly name: {
@@ -24,7 +40,7 @@ const People: People_Type = {
 
 const Introduction = () => {
   return (
-    <>
+    <IntroductionStyle>
       <p>{People.name.jp_name}</p>
       <p>{People.name.en_name}</p>
       <p>性別: {People.gender}</p>
@@ -32,7 +48,8 @@ const Introduction = () => {
       <p>生年月日: {People.birthday}</p>
       <p>住所: {People.address}</p>
       <p>message,message,message,message,message,message,message,message</p>
-    </>
+      <RadiusImg src={AuterImg} />
+    </IntroductionStyle>
   )
 }
 
