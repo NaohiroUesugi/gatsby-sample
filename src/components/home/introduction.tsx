@@ -72,9 +72,6 @@ const People: People_Type = {
   address: '奈良県生駒市',
 }
 
-console.log(People.name.katakana_name)
-console.log(People[key].katakana_name)
-
 
 const Introduction = () => {
   return (
