@@ -12,7 +12,7 @@ const IntroductionStyle = styled.div`
 
 const CenterDiv = styled.div`
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1.25fr 2fr;
 `
 const TextField = styled.div`
   height: 300px;
@@ -37,7 +37,7 @@ const BoldCenter = styled.p`
 `
 
 const IntroductionData = styled(TextField)`
-  width: 900px;
+  width: 700px;
   margin: 75px 0px 75px;
 `
 
@@ -46,6 +46,9 @@ const IntroductionMessage = styled.p`
 `
 
 const IntroductionBasicInfo = styled.div`
+  display: grid;
+  grid-template-rows: 30px 30px 30px 30px;
+  grid-template-columns: 1fr 2fr;
 `
 
 interface People_Type {
@@ -72,7 +75,6 @@ const People: People_Type = {
   address: '奈良県生駒市',
 }
 
-
 const Introduction = () => {
   return (
     <IntroductionStyle>
@@ -86,12 +88,26 @@ const Introduction = () => {
             message,message,message,message,message,message,message,messagemessage,message,message,message,message,messagemessage,message,message,message,
             message,messagemessage,message,message,message,message,message
           </IntroductionMessage>
+          <p>
+            {People.name.jp_name} : {People.name.katakana_name}
+          </p>
           <IntroductionBasicInfo>
-            <p>{People.name.jp_name}:{People.name.katakana_name}</p>
-            <p><b>性別</b> {People.gender}</p>
-            <p><b>年齢</b> {People.age}</p>
-            <p><b>生年月日</b> {People.birthday}</p>
-            <p><b>住所</b> {People.address}</p>
+            <p>
+              <b>性別</b>
+            </p>
+            <p>{People.gender}</p>
+            <p>
+              <b>年齢</b>
+            </p>
+            <p>{People.age}</p>
+            <p>
+              <b>生年月日</b>
+            </p>
+            <p>{People.birthday}</p>
+            <p>
+              <b>住所</b>
+            </p>
+            <p>{People.address}</p>
           </IntroductionBasicInfo>
         </IntroductionData>
       </CenterDiv>
