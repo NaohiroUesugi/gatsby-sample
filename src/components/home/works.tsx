@@ -8,7 +8,7 @@ import Neo4jImg from '../../images/neo4j.png'
 const WorksStyle = styled.div`
   display: grid;
   grid-template:
-    'header' 300px
+    'header' 250px
     'main' 2fr
     / auto;
 `
@@ -47,11 +47,11 @@ const Image = styled.img`
 `
 
 const Explanation = styled.div`
-  .title{
+  .title {
     font-weight: bold;
     font-size: 20px;
   }
-  text-align:center;
+  text-align: center;
 `
 
 const Button = styled.button`
@@ -73,25 +73,25 @@ const Works = () => {
       </WorksHeder>
       <WorksMain>
         <Item>
-          <Image src={ReactImg}/>
+          <Image src={ReactImg} />
           <Explanation>
-            <p className='title'>aaaaLP</p>
+            <p className="title">aaaaLP</p>
             <p>Coding/Gatsby</p>
             <Button>Normal</Button>
           </Explanation>
         </Item>
         <Item>
-          <Image src={GatsbyImg}/>
+          <Image src={GatsbyImg} />
           <Explanation>
-          <p className='title'>bbbbLP</p>
-          <p>Coding/Gatsby</p>
-          <Button>Normal</Button>
+            <p className="title">bbbbLP</p>
+            <p>Coding/Gatsby</p>
+            <Button>Normal</Button>
           </Explanation>
         </Item>
         <Item>
-          <Image src={Neo4jImg}/>
+          <Image src={Neo4jImg} />
           <Explanation>
-            <p className='title'>ccccLP</p>
+            <p className="title">ccccLP</p>
             <p>Coding/Gatsby</p>
             <Button>Normal</Button>
           </Explanation>
