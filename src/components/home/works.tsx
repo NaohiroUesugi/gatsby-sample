@@ -24,12 +24,13 @@ const WorksMain = styled.div`
   margin: 0px 5%;
   grid-area: main;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 450px));
-  grid-template-rows: 500px;
-  grid-auto-rows: 500px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* grid-template-rows: 500px;
+  grid-auto-rows: 500px; */
 `
 
 const Item = styled.div`
+  height: 500px;
   display: grid;
   grid-template:
     'image' 300px
@@ -38,8 +39,6 @@ const Item = styled.div`
 `
 
 const Image = styled.img`
-  /* background: green; */
-  /* text-align:center; */
   width: 300px;
   height: 300px;
   justify-self: center;
