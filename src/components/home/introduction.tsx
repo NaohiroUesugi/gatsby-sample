@@ -4,51 +4,55 @@ import styled from 'styled-components'
 import AuterImg from '../../images/auther.jpg'
 
 const IntroductionStyle = styled.div`
-  height: 450px;
+  padding: 80px 150px 85px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   color: #fff;
   background-position: center;
-  background-image: url('https://www.pakutaso.com/shared/img/thumb/MIYADSC_3425-3_TP_V.jpg');
+  background-image: url('https://www.pakutaso.com/shared/img/thumb/texture98A2437_TP_V.jpg');
 `
 
-const CenterDiv = styled.div`
-  display: grid;
-  grid-template-columns: 1.25fr 2fr;
-`
-const TextField = styled.div`
-  height: 300px;
-`
-
-const IntroductionImage = styled(TextField)`
-  width: 300px;
+const IntroductionImage = styled.div`
+  height: 320px;
+  width: 320px;
+  justify-self: center;
+  align-self: center;
+  text-align: center;
+  font-size: 20px;
   border: thin solid #fff;
-  margin: 75px auto 75px;
 `
 
 const RadiusImg = styled.img`
-  padding: 30px 80px 10px;
+  margin: 40px 25% 5px;
   width: 140px;
   border-radius: 50%;
 `
 
-const BoldCenter = styled.p`
-  text-align: center;
-  font-weight: bold;
-  font-size: 20px;
-`
-
-const IntroductionData = styled(TextField)`
-  width: 700px;
-  margin: 75px 0px 75px;
+const IntroductionData = styled.div`
+  padding-left: 20px;
+  align-self: center;
+  grid-column: span 2;
+  height: 320px;
 `
 
 const IntroductionMessage = styled.p`
+  border-bottom: solid 1px #fff;
+  letter-spacing: 0.1em;
+  font-size: 20px;
   word-wrap: break-word;
 `
 
+const Name = styled.p`
+  margin-top: 30px;
+`
+
 const IntroductionBasicInfo = styled.div`
+  height: 300px;
+  margin-top: 10px;
   display: grid;
-  grid-template-rows: 30px 30px 30px 30px;
   grid-template-columns: 1fr 2fr;
+  grid-template-rows: 30px 30px 30px 30px;
+  grid-gap: 10px 0px;
 `
 
 interface People_Type {
@@ -78,39 +82,36 @@ const People: People_Type = {
 const Introduction = () => {
   return (
     <IntroductionStyle>
-      <CenterDiv>
-        <IntroductionImage>
-          <RadiusImg src={AuterImg} />
-          <BoldCenter>{People.name.en_name}</BoldCenter>
-        </IntroductionImage>
-        <IntroductionData>
-          <IntroductionMessage>
-            message,message,message,message,message,message,message,messagemessage,message,message,message,message,messagemessage,message,message,message,
-            message,messagemessage,message,message,message,message,message
-          </IntroductionMessage>
+      <IntroductionImage>
+        <RadiusImg src={AuterImg} />
+        <p>{People.name.en_name}</p>
+      </IntroductionImage>
+      <IntroductionData>
+        <IntroductionMessage>
+          message,message,message,message,message,message,message,message,message,message,message,message,message,message,mes
+        </IntroductionMessage>
+        <Name>
+          {People.name.jp_name} : {People.name.katakana_name}
+        </Name>
+        <IntroductionBasicInfo>
           <p>
-            {People.name.jp_name} : {People.name.katakana_name}
+            <b>性別</b>
           </p>
-          <IntroductionBasicInfo>
-            <p>
-              <b>性別</b>
-            </p>
-            <p>{People.gender}</p>
-            <p>
-              <b>年齢</b>
-            </p>
-            <p>{People.age}</p>
-            <p>
-              <b>生年月日</b>
-            </p>
-            <p>{People.birthday}</p>
-            <p>
-              <b>住所</b>
-            </p>
-            <p>{People.address}</p>
-          </IntroductionBasicInfo>
-        </IntroductionData>
-      </CenterDiv>
+          <p>{People.gender}</p>
+          <p>
+            <b>年齢</b>
+          </p>
+          <p>{People.age}</p>
+          <p>
+            <b>生年月日</b>
+          </p>
+          <p>{People.birthday}</p>
+          <p>
+            <b>住所</b>
+          </p>
+          <p>{People.address}</p>
+        </IntroductionBasicInfo>
+      </IntroductionData>
     </IntroductionStyle>
   )
 }

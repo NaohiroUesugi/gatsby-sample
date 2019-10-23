@@ -24,9 +24,7 @@ const WorksMain = styled.div`
   margin: 0px 5%;
   grid-area: main;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  /* grid-template-rows: 500px;
-  grid-auto-rows: 500px; */
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 `
 
 const Item = styled.div`

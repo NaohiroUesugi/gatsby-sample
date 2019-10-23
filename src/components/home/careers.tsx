@@ -15,12 +15,12 @@ const TwoCareers = styled.div`
 const Content = styled.div`
   height: 500px;
   color: #676767;
-  h3{
-    color: #00A1AB;
+  h3 {
+    color: #00a1ab;
     padding-bottom: 10px;
-    border-bottom: solid 1px #C4C4C4;
+    border-bottom: solid 1px #c4c4c4;
   }
-  li{
+  li {
     font-weight: bold;
   }
 `
@@ -54,20 +54,20 @@ const Careers = () => {
         </Content>
       </TwoCareers>
       <TwoCareers>
-      <Content>
-        <h3>SKILL</h3>
-        <ul>
-          <li>list1</li>
-          <li>list1</li>
-        </ul>
-      </Content>
-      <Content>
-        <h3>PERSONAL QUALITIES</h3>
-        <ul>
-          <li>list1</li>
-          <li>list1</li>
-        </ul>
-      </Content>
+        <Content>
+          <h3>SKILL</h3>
+          <ul>
+            <li>list1</li>
+            <li>list1</li>
+          </ul>
+        </Content>
+        <Content>
+          <h3>PERSONAL QUALITIES</h3>
+          <ul>
+            <li>list1</li>
+            <li>list1</li>
+          </ul>
+        </Content>
       </TwoCareers>
     </CareersStyle>
   )
