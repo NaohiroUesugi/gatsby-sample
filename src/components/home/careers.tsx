@@ -1,6 +1,8 @@
 import * as React from 'react'
-
 import styled from 'styled-components'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAddressBook } from '@fortawesome/free-solid-svg-icons'
 
 const CareersStyle = styled.div`
   background: #f7f7f7;
@@ -9,16 +11,22 @@ const CareersStyle = styled.div`
 const TwoCareers = styled.div`
   padding: 60px 30px 0px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 30px;
 `
 const Content = styled.div`
+  font-size: 20px;
   height: 500px;
-  color: #676767;
+  color: #c4c4c4;
   h3 {
+    margin-left: 10px;
     color: #00a1ab;
+    display: inline-block;
     padding-bottom: 10px;
     border-bottom: solid 1px #c4c4c4;
+  }
+  ul {
+    padding-left: 22px;
   }
   li {
     font-weight: bold;
@@ -38,6 +46,7 @@ const Careers = () => {
     <CareersStyle>
       <TwoCareers>
         <Content>
+          <FontAwesomeIcon icon={faAddressBook} size="sm" color="#C4dC4C4" />
           <h3>EXPRERIENCE</h3>
           <ul>
             <li>list1</li>

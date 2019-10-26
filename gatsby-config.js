@@ -5,6 +5,7 @@ module.exports = {
     author: `UesugiNaohiro`,
   },
   plugins: [
+    `gatsby-plugin-smoothscroll`,
     'react-media',
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-typescript`,

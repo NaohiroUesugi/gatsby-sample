@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import AuterImg from '../../images/auther.jpg'
 
 const IntroductionStyle = styled.div`
-  padding: 80px 150px 85px;
+  padding: 60px 40px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   color: #fff;
@@ -13,6 +13,7 @@ const IntroductionStyle = styled.div`
 `
 
 const IntroductionImage = styled.div`
+  margin: 0px 80px;
   height: 320px;
   width: 320px;
   justify-self: center;

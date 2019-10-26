@@ -20,7 +20,7 @@ const ActivityHeder = styled.div`
 const ActivityMain = styled.div`
   padding: 60px 30px 0px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 30px;
 `
 

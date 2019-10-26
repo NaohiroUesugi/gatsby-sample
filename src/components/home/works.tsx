@@ -1,5 +1,9 @@
 import * as React from 'react'
+import Link from 'gatsby-link'
 import styled from 'styled-components'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
 
 import ReactImg from '../../images/react.png'
 import GatsbyImg from '../../images/gatsby.png'
@@ -24,7 +28,7 @@ const WorksMain = styled.div`
   margin: 0px 5%;
   grid-area: main;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 `
 
 const Item = styled.div`
@@ -51,16 +55,6 @@ const Explanation = styled.div`
   text-align: center;
 `
 
-const Button = styled.button`
-  background: palevioletred;
-  color: white;
-  font-size: 1em;
-  margin: 1em;
-  padding: 0.25em 1em;
-  border: 2px solid palevioletred;
-  border-radius: 3px;
-`
-
 const Works = () => {
   return (
     <WorksStyle>
@@ -74,7 +68,10 @@ const Works = () => {
           <Explanation>
             <p className="title">aaaaLP</p>
             <p>Coding/Gatsby</p>
-            <Button>Normal</Button>
+            <Link to="/page-2/">
+              {' '}
+              <FontAwesomeIcon icon={faAngleRight} size="3x" color="#EF75BE" />
+            </Link>
           </Explanation>
         </Item>
         <Item>
@@ -82,7 +79,10 @@ const Works = () => {
           <Explanation>
             <p className="title">bbbbLP</p>
             <p>Coding/Gatsby</p>
-            <Button>Normal</Button>
+            <Link to="/page-2/">
+              {' '}
+              <FontAwesomeIcon icon={faAngleRight} size="3x" color="#EF75BE" />
+            </Link>
           </Explanation>
         </Item>
         <Item>
@@ -90,7 +90,10 @@ const Works = () => {
           <Explanation>
             <p className="title">ccccLP</p>
             <p>Coding/Gatsby</p>
-            <Button>Normal</Button>
+            <Link to="/page-2/">
+              {' '}
+              <FontAwesomeIcon icon={faAngleRight} size="3x" color="#EF75BE" />
+            </Link>
           </Explanation>
         </Item>
       </WorksMain>
