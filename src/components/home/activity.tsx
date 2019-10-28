@@ -1,6 +1,9 @@
 import * as React from 'react'
 import styled from 'styled-components'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHeart, faPencilAlt } from '@fortawesome/free-solid-svg-icons'
+
 const ActivityStyle = styled.div`
   display: grid;
   grid-template:
@@ -15,6 +18,28 @@ const ActivityHeder = styled.div`
   grid-area: header;
   text-align: center;
   align-self: center;
+`
+
+const Header = styled.div`
+  margin-bottom: 20px;
+  display: grid;
+  grid-template:
+    'img title' auto
+    / 20px 1fr;
+  grid-gap: 0px 10px;
+  .img {
+    padding-top: 4px;
+    justify-self: center;
+    align-self: start;
+  }
+  .title {
+    margin: 0;
+    align-self: center;
+    color: #00a1ab;
+    display: inline-block;
+    border-bottom: solid 1px #c4c4c4;
+    padding-bottom: 15px;
+  }
 `
 
 const ActivityMain = styled.div`
@@ -58,22 +83,24 @@ const Activity = () => {
         <p>活動</p>
       </ActivityHeder>
       <ActivityMain>
-        <Blog>
-          <h3>BLOG</h3>
-          <ul>
-            <li>list1</li>
-            <p>testtesttest</p>
-            <li>list1</li>
-          </ul>
-        </Blog>
-        <Interrest>
-          <h3>INTERREST</h3>
-          <ul>
-            <li>list1</li>
-            <p>testtesttest</p>
-            <li>list1</li>
-          </ul>
-        </Interrest>
+        <Header>
+          <FontAwesomeIcon
+            icon={faPencilAlt}
+            size="sm"
+            color="#C4dC4C4"
+            className="img"
+          />
+          <h3 className="title">BLOG</h3>
+        </Header>
+        <Header>
+          <FontAwesomeIcon
+            icon={faHeart}
+            size="sm"
+            color="#C4dC4C4"
+            className="img"
+          />
+          <h3 className="title">INTERREST</h3>
+        </Header>
       </ActivityMain>
     </ActivityStyle>
   )

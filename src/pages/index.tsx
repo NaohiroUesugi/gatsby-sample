@@ -2,7 +2,6 @@ import * as React from 'react'
 import Link from 'gatsby-link'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
-import scrollTo from 'gatsby-plugin-smoothscroll'
 
 import Introduction from '../components/home/introduction'
 import Works from '../components/home/works'
@@ -17,6 +16,10 @@ const GoToBack = styled.div`
   position: fixed;
   bottom: 5%;
   right: 5%;
+`
+
+const Component = styled.div`
+  font-family: Verdana;
 `
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema
@@ -36,7 +39,7 @@ export default class extends React.Component<Home, {}> {
   }
   public render() {
     return (
-      <>
+      <Component>
         <Introduction />
         <Works />
         <Careers />
@@ -58,7 +61,7 @@ export default class extends React.Component<Home, {}> {
         </p>
         <p>Now go build something great.</p>
         <Link to="/page-2/">Go to page 2</Link>
-      </>
+      </Component>
     )
   }
 }

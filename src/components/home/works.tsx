@@ -17,7 +17,6 @@ const WorksStyle = styled.div`
     / auto;
 `
 const WorksHeder = styled.div`
-  font-family: Verdana;
   color: #515151;
   grid-area: header;
   text-align: center;

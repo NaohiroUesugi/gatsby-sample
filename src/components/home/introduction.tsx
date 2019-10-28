@@ -13,7 +13,6 @@ const IntroductionStyle = styled.div`
 `
 
 const IntroductionImage = styled.div`
-  margin: 0px 80px;
   height: 320px;
   width: 320px;
   justify-self: center;
@@ -30,13 +29,15 @@ const RadiusImg = styled.img`
 `
 
 const IntroductionData = styled.div`
-  padding-left: 20px;
-  align-self: center;
+  width: 80%;
+  font-size: 18px;
+  justify-self: center;
+  align-self: stretch;
   grid-column: span 2;
-  height: 320px;
 `
 
 const IntroductionMessage = styled.p`
+  padding-bottom: 10px;
   border-bottom: solid 1px #fff;
   letter-spacing: 0.1em;
   font-size: 20px;
@@ -48,7 +49,6 @@ const Name = styled.p`
 `
 
 const IntroductionBasicInfo = styled.div`
-  height: 300px;
   margin-top: 10px;
   display: grid;
   grid-template-columns: 1fr 2fr;
