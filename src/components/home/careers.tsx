@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import { Doughnut } from 'react-chartjs-2';
+import { Doughnut } from 'react-chartjs-2'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAddressBook } from '@fortawesome/free-solid-svg-icons'
@@ -99,35 +99,23 @@ const PersonalQualities = styled.div`
 `
 
 const Careers = () => {
-
   const data = {
-    labels: [
-        "Red",
-        "Blue",
-        "Yellow"
-    ],
+    labels: ['Red', 'Blue', 'Yellow'],
     datasets: [
-        {
-            data: [300, 50, 100],
-            backgroundColor: [
-                "#FF6384",
-                "#36A2EB",
-                "#FFCE56"
-            ],
-            hoverBackgroundColor: [
-                "#FF6384",
-                "#36A2EB",
-                "#FFCE56"
-            ]
-        }]
-   };
+      {
+        data: [300, 50, 100],
+        backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
+        hoverBackgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
+      },
+    ],
+  }
 
-const styles = {
- graphContainer: {
-  border: '1px solid black',
-  padding: '15px'
- }
-}
+  const styles = {
+    graphContainer: {
+      border: '1px solid black',
+      padding: '15px',
+    },
+  }
 
   const ListCompo = ({ children }: any) => {
     return (
@@ -231,26 +219,26 @@ const styles = {
             <p className="other">ES6</p>
           </Skill>
           <Skill>
-          <p className="skill_name">Ruby</p>
-          <Score>
-            <p className="score green"></p>
-            <p className="score green"></p>
-            <p className="score green"></p>
-            <p className="score"></p>
-            <p className="score"></p>
-          </Score>
-          <p className="other"></p>
+            <p className="skill_name">Ruby</p>
+            <Score>
+              <p className="score green"></p>
+              <p className="score green"></p>
+              <p className="score green"></p>
+              <p className="score"></p>
+              <p className="score"></p>
+            </Score>
+            <p className="other"></p>
           </Skill>
           <Skill>
-          <p className="skill_name">React</p>
-          <Score>
-            <p className="score green"></p>
-            <p className="score green"></p>
-            <p className="score green"></p>
-            <p className="score green"></p>
-            <p className="score"></p>
-          </Score>
-          <p className="other">Reduxは少し</p>
+            <p className="skill_name">React</p>
+            <Score>
+              <p className="score green"></p>
+              <p className="score green"></p>
+              <p className="score green"></p>
+              <p className="score green"></p>
+              <p className="score"></p>
+            </Score>
+            <p className="other">Reduxは少し</p>
           </Skill>
         </Content>
         <Content>

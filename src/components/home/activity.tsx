@@ -4,6 +4,9 @@ import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart, faPencilAlt } from '@fortawesome/free-solid-svg-icons'
 
+import TennisImg from '../../images/tennis.jpg'
+import MathImg from '../../images/math.jpg'
+
 const ActivityStyle = styled.div`
   display: grid;
   grid-template:
@@ -59,25 +62,27 @@ const Blog = styled.div`
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-gap: 20px;
-  .blog_date{
+  .blog_date {
     color: #000;
   }
-  .blog_msg{
-    color: #EF75BE;
+  .blog_msg {
+    color: #ef75be;
   }
 `
 
 const Interrest = styled.div`
-  height: 500px;
-  color: #676767;
-  h3 {
-    color: #00a1ab;
-    padding-bottom: 10px;
-    border-bottom: solid 1px #c4c4c4;
-  }
-  li {
-    font-weight: bold;
-  }
+  margin: 0px 35px 15px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  color: #000;
+  text-align: center;
+`
+
+const RadiusImg = styled.img`
+  width: calc(25vmin - 60px);
+  height: calc(25vmin - 60px);
+  border-radius: 50%;
 `
 
 const Activity = () => {
@@ -116,7 +121,14 @@ const Activity = () => {
             <h3 className="title">INTERREST</h3>
           </Header>
           <Interrest>
-            
+            <div>
+              <RadiusImg src={TennisImg} />
+              <p>テニス</p>
+            </div>
+            <div>
+              <RadiusImg src={MathImg} />
+              <p>数学</p>
+            </div>
           </Interrest>
         </Content>
       </ActivityMain>

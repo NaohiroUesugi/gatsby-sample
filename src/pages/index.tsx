@@ -1,6 +1,5 @@
 import * as React from 'react'
 import Link from 'gatsby-link'
-import { graphql } from 'gatsby'
 import styled from 'styled-components'
 
 import Introduction from '../components/home/introduction'
@@ -21,8 +20,11 @@ const GoToBack = styled.div`
 const Component = styled.div`
   font-family: Verdana;
 `
-// Please note that you can use https://github.com/dotansimha/graphql-code-generator
-// to generate all types from graphQL schema
+
+const Footer = styled.div`
+  height: 80px;
+  background-color: #515151;
+`
 interface Home {
   data: {
     site: {
@@ -45,6 +47,7 @@ export default class extends React.Component<Home, {}> {
         <Careers />
         <Activity />
         <SnsFooter />
+        <Footer />
         <GoToBack>
           <Link to="#">
             <FontAwesomeIcon
@@ -65,13 +68,3 @@ export default class extends React.Component<Home, {}> {
     )
   }
 }
-
-export const pageQuery = graphql`
-  query IndexQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`
