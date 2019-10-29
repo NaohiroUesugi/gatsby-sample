@@ -1,5 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
+import { Doughnut } from 'react-chartjs-2';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAddressBook } from '@fortawesome/free-solid-svg-icons'
@@ -19,7 +20,7 @@ const Content = styled.div`
   color: #c4c4c4;
 `
 const Header = styled.div`
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   display: grid;
   grid-template:
     'img title' auto
@@ -68,19 +69,17 @@ const ListMsg = styled.div`
 `
 
 const Skill = styled.div`
-  margin: 0px 35px;
+  margin: 0px 35px 15px;
   color: #515151;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   p {
     font-weight: bold;
     font-size: 20px;
-    margin: 30px 0px 0px;
+    margin: 25px 0px 0px;
   }
 `
 const Score = styled.div`
-  text-align: center;
-  align-self: center;
   .score {
     display: inline-block;
     width: 12px;
@@ -100,6 +99,36 @@ const PersonalQualities = styled.div`
 `
 
 const Careers = () => {
+
+  const data = {
+    labels: [
+        "Red",
+        "Blue",
+        "Yellow"
+    ],
+    datasets: [
+        {
+            data: [300, 50, 100],
+            backgroundColor: [
+                "#FF6384",
+                "#36A2EB",
+                "#FFCE56"
+            ],
+            hoverBackgroundColor: [
+                "#FF6384",
+                "#36A2EB",
+                "#FFCE56"
+            ]
+        }]
+   };
+
+const styles = {
+ graphContainer: {
+  border: '1px solid black',
+  padding: '15px'
+ }
+}
+
   const ListCompo = ({ children }: any) => {
     return (
       <List>
@@ -111,6 +140,7 @@ const Careers = () => {
       </List>
     )
   }
+
   return (
     <CareersStyle>
       <TwoCareers>
@@ -199,15 +229,28 @@ const Careers = () => {
               <p className="score"></p>
             </Score>
             <p className="other">ES6</p>
-            <p className="skill_name">Ruby</p>
-            <Score>
-              <p className="score green"></p>
-              <p className="score green"></p>
-              <p className="score green"></p>
-              <p className="score"></p>
-              <p className="score"></p>
-            </Score>
-            <p className="other"></p>
+          </Skill>
+          <Skill>
+          <p className="skill_name">Ruby</p>
+          <Score>
+            <p className="score green"></p>
+            <p className="score green"></p>
+            <p className="score green"></p>
+            <p className="score"></p>
+            <p className="score"></p>
+          </Score>
+          <p className="other"></p>
+          </Skill>
+          <Skill>
+          <p className="skill_name">React</p>
+          <Score>
+            <p className="score green"></p>
+            <p className="score green"></p>
+            <p className="score green"></p>
+            <p className="score green"></p>
+            <p className="score"></p>
+          </Score>
+          <p className="other">Reduxは少し</p>
           </Skill>
         </Content>
         <Content>
@@ -220,6 +263,7 @@ const Careers = () => {
             />
             <h3 className="title">PERSONAL QUALITIES</h3>
           </Header>
+          <Doughnut data={data} />
         </Content>
       </TwoCareers>
     </CareersStyle>

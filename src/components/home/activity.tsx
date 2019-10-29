@@ -21,7 +21,7 @@ const ActivityHeder = styled.div`
 `
 
 const Header = styled.div`
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   display: grid;
   grid-template:
     'img title' auto
@@ -49,16 +49,21 @@ const ActivityMain = styled.div`
   grid-gap: 30px;
 `
 
+const Content = styled.div`
+  font-size: 20px;
+  color: #c4c4c4;
+`
+
 const Blog = styled.div`
-  height: 500px;
-  color: #676767;
-  h3 {
-    color: #00a1ab;
-    padding-bottom: 10px;
-    border-bottom: solid 1px #c4c4c4;
+  margin: 0px 35px 15px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 20px;
+  .blog_date{
+    color: #000;
   }
-  li {
-    font-weight: bold;
+  .blog_msg{
+    color: #EF75BE;
   }
 `
 
@@ -83,24 +88,37 @@ const Activity = () => {
         <p>活動</p>
       </ActivityHeder>
       <ActivityMain>
-        <Header>
-          <FontAwesomeIcon
-            icon={faPencilAlt}
-            size="sm"
-            color="#C4dC4C4"
-            className="img"
-          />
-          <h3 className="title">BLOG</h3>
-        </Header>
-        <Header>
-          <FontAwesomeIcon
-            icon={faHeart}
-            size="sm"
-            color="#C4dC4C4"
-            className="img"
-          />
-          <h3 className="title">INTERREST</h3>
-        </Header>
+        <Content>
+          <Header>
+            <FontAwesomeIcon
+              icon={faPencilAlt}
+              size="sm"
+              color="#C4dC4C4"
+              className="img"
+            />
+            <h3 className="title">BLOG</h3>
+          </Header>
+          <Blog>
+            <p className="blog_date">2019.10.26</p>
+            <p className="blog_msg">ipad_proを購入</p>
+            <p className="blog_date">2019.09.1</p>
+            <p className="blog_msg">高校の友達と旅行 (四国に)</p>
+          </Blog>
+        </Content>
+        <Content>
+          <Header>
+            <FontAwesomeIcon
+              icon={faHeart}
+              size="sm"
+              color="#C4dC4C4"
+              className="img"
+            />
+            <h3 className="title">INTERREST</h3>
+          </Header>
+          <Interrest>
+            
+          </Interrest>
+        </Content>
       </ActivityMain>
     </ActivityStyle>
   )

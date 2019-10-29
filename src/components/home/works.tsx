@@ -68,7 +68,6 @@ const Works = () => {
             <p className="title">aaaaLP</p>
             <p>Coding/Gatsby</p>
             <Link to="/page-2/">
-              {' '}
               <FontAwesomeIcon icon={faAngleRight} size="3x" color="#EF75BE" />
             </Link>
           </Explanation>
@@ -79,7 +78,6 @@ const Works = () => {
             <p className="title">bbbbLP</p>
             <p>Coding/Gatsby</p>
             <Link to="/page-2/">
-              {' '}
               <FontAwesomeIcon icon={faAngleRight} size="3x" color="#EF75BE" />
             </Link>
           </Explanation>
@@ -90,7 +88,6 @@ const Works = () => {
             <p className="title">ccccLP</p>
             <p>Coding/Gatsby</p>
             <Link to="/page-2/">
-              {' '}
               <FontAwesomeIcon icon={faAngleRight} size="3x" color="#EF75BE" />
             </Link>
           </Explanation>
