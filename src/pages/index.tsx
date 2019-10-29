@@ -1,5 +1,6 @@
 import * as React from 'react'
 import Link from 'gatsby-link'
+import { graphql } from 'gatsby'
 import styled from 'styled-components'
 
 import Introduction from '../components/home/introduction'
@@ -47,7 +48,7 @@ export default class extends React.Component<Home, {}> {
         <Careers />
         <Activity />
         <SnsFooter />
-        <Footer />
+        <Footer/>
         <GoToBack>
           <Link to="#">
             <FontAwesomeIcon
@@ -57,14 +58,24 @@ export default class extends React.Component<Home, {}> {
             />
           </Link>
         </GoToBack>
-        <h2>以下は練習</h2>
+        {/* <h2>以下は練習</h2>
         <p>
           Welcome to your new{' '}
           <strong>{this.props.data.site.siteMetadata.title}</strong> site.
         </p>
         <p>Now go build something great.</p>
-        <Link to="/page-2/">Go to page 2</Link>
+        <Link to="/page-2/">Go to page 2</Link> */}
       </Component>
     )
   }
 }
+
+export const pageQuery = graphql`
+  query IndexQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`
