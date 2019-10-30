@@ -5,6 +5,8 @@ import { Doughnut } from 'react-chartjs-2'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAddressBook } from '@fortawesome/free-solid-svg-icons'
 
+import {Content, Header} from './common_style/list_content'
+
 const CareersStyle = styled.div`
   background: #f7f7f7;
 `
@@ -14,31 +16,6 @@ const TwoCareers = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 30px;
-`
-const Content = styled.div`
-  font-size: 20px;
-  color: #c4c4c4;
-`
-const Header = styled.div`
-  margin-bottom: 40px;
-  display: grid;
-  grid-template:
-    'img title' auto
-    / 20px 1fr;
-  grid-gap: 0px 15px;
-  .img {
-    padding-top: 4px;
-    justify-self: center;
-    align-self: start;
-  }
-  .title {
-    margin: 0;
-    align-self: center;
-    color: #00a1ab;
-    display: inline-block;
-    border-bottom: solid 1px #c4c4c4;
-    padding-bottom: 15px;
-  }
 `
 
 const List = styled.div`
@@ -93,28 +70,15 @@ const Score = styled.div`
   }
 `
 
-const PersonalQualities = styled.div`
-  height: 300px;
-  /* background: hsl(200, 80%, 30%); */
-`
-
 const Careers = () => {
   const data = {
-    labels: ['Red', 'Blue', 'Yellow'],
+    labels: ['Green', 'not'],
     datasets: [
       {
-        data: [300, 50, 100],
-        backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
-        hoverBackgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
-      },
+        data: [75, 25],
+        backgroundColor: ['#56C9C5', '#515151'],
+      }
     ],
-  }
-
-  const styles = {
-    graphContainer: {
-      border: '1px solid black',
-      padding: '15px',
-    },
   }
 
   const ListCompo = ({ children }: any) => {
@@ -127,6 +91,18 @@ const Careers = () => {
         <ListMsg>{children}</ListMsg>
       </List>
     )
+  }
+
+  // スキルのスコアを5段階で表示する
+  const scoreList = (level:number) => {
+    const list = [...Array(5)].map((_, i) => {
+      if (i < level) {
+        return <p className="score green" key={i}></p>
+      }else{
+        return <p className="score" key={i}></p>
+      }
+    })
+    return list
   }
 
   return (
@@ -210,35 +186,30 @@ const Careers = () => {
           <Skill>
             <p className="skill_name">javascript</p>
             <Score>
-              <p className="score green"></p>
-              <p className="score green"></p>
-              <p className="score"></p>
-              <p className="score"></p>
-              <p className="score"></p>
+              {scoreList(2)}
             </Score>
             <p className="other">ES6</p>
           </Skill>
           <Skill>
             <p className="skill_name">Ruby</p>
             <Score>
-              <p className="score green"></p>
-              <p className="score green"></p>
-              <p className="score green"></p>
-              <p className="score"></p>
-              <p className="score"></p>
+              {scoreList(3)}
             </Score>
             <p className="other"></p>
           </Skill>
           <Skill>
             <p className="skill_name">React</p>
             <Score>
-              <p className="score green"></p>
-              <p className="score green"></p>
-              <p className="score green"></p>
-              <p className="score green"></p>
-              <p className="score"></p>
+              {scoreList(3)}
             </Score>
             <p className="other">Reduxは少し</p>
+          </Skill>
+          <Skill>
+            <p className="skill_name">Typescript</p>
+            <Score>
+              {scoreList(1)}
+            </Score>
+            <p className="other">今回が初めて</p>
           </Skill>
         </Content>
         <Content>

@@ -7,6 +7,9 @@ import { faHeart, faPencilAlt } from '@fortawesome/free-solid-svg-icons'
 import TennisImg from '../../images/tennis.jpg'
 import MathImg from '../../images/math.jpg'
 
+import ActivityHeder from './common_style/text_center_grid'
+import {Content, Header} from './common_style/list_content'
+
 const ActivityStyle = styled.div`
   display: grid;
   grid-template:
@@ -15,46 +18,11 @@ const ActivityStyle = styled.div`
     / auto;
 `
 
-const ActivityHeder = styled.div`
-  font-family: Verdana;
-  color: #515151;
-  grid-area: header;
-  text-align: center;
-  align-self: center;
-`
-
-const Header = styled.div`
-  margin-bottom: 40px;
-  display: grid;
-  grid-template:
-    'img title' auto
-    / 20px 1fr;
-  grid-gap: 0px 10px;
-  .img {
-    padding-top: 4px;
-    justify-self: center;
-    align-self: start;
-  }
-  .title {
-    margin: 0;
-    align-self: center;
-    color: #00a1ab;
-    display: inline-block;
-    border-bottom: solid 1px #c4c4c4;
-    padding-bottom: 15px;
-  }
-`
-
 const ActivityMain = styled.div`
   padding: 60px 30px 0px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 30px;
-`
-
-const Content = styled.div`
-  font-size: 20px;
-  color: #c4c4c4;
 `
 
 const Blog = styled.div`

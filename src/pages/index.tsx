@@ -1,6 +1,5 @@
 import * as React from 'react'
 import Link from 'gatsby-link'
-import { graphql } from 'gatsby'
 import styled from 'styled-components'
 
 import Introduction from '../components/home/introduction'
@@ -26,20 +25,8 @@ const Footer = styled.div`
   height: 80px;
   background-color: #515151;
 `
-interface Home {
-  data: {
-    site: {
-      siteMetadata: {
-        title: string
-      }
-    }
-  }
-}
 
-export default class extends React.Component<Home, {}> {
-  constructor(props: Home, context: any) {
-    super(props, context)
-  }
+export default class extends React.Component {
   public render() {
     return (
       <Component>
@@ -58,24 +45,7 @@ export default class extends React.Component<Home, {}> {
             />
           </Link>
         </GoToBack>
-        {/* <h2>以下は練習</h2>
-        <p>
-          Welcome to your new{' '}
-          <strong>{this.props.data.site.siteMetadata.title}</strong> site.
-        </p>
-        <p>Now go build something great.</p>
-        <Link to="/page-2/">Go to page 2</Link> */}
       </Component>
     )
   }
 }
-
-export const pageQuery = graphql`
-  query IndexQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`

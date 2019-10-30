@@ -5,9 +5,12 @@ import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
 
-import ReactImg from '../../images/react.png'
-import GatsbyImg from '../../images/gatsby.png'
-import Neo4jImg from '../../images/neo4j.png'
+import GatsbyImage from './images/gatsby_image'
+import ReactImage from './images/react_image'
+import Neo4jImage from './images/neo4j_image'
+
+import WorksHeder from './common_style/text_center_grid'
+
 
 const WorksStyle = styled.div`
   display: grid;
@@ -15,12 +18,6 @@ const WorksStyle = styled.div`
     'header' 250px
     'main' 2fr
     / auto;
-`
-const WorksHeder = styled.div`
-  color: #515151;
-  grid-area: header;
-  text-align: center;
-  align-self: center;
 `
 
 const WorksMain = styled.div`
@@ -37,13 +34,10 @@ const Item = styled.div`
     'image' 300px
     'explanation' 1fr
     / auto;
-`
-
-const Image = styled.img`
-  width: 300px;
-  height: 300px;
-  justify-self: center;
-  object-fit: cover;
+  .img{
+    justify-self: center;
+    object-fit: cover;
+  }
 `
 
 const Explanation = styled.div`
@@ -63,7 +57,7 @@ const Works = () => {
       </WorksHeder>
       <WorksMain>
         <Item>
-          <Image src={ReactImg} />
+          <ReactImage/>
           <Explanation>
             <p className="title">aaaaLP</p>
             <p>Coding/Gatsby</p>
@@ -73,7 +67,7 @@ const Works = () => {
           </Explanation>
         </Item>
         <Item>
-          <Image src={GatsbyImg} />
+          <GatsbyImage/>
           <Explanation>
             <p className="title">bbbbLP</p>
             <p>Coding/Gatsby</p>
@@ -83,7 +77,7 @@ const Works = () => {
           </Explanation>
         </Item>
         <Item>
-          <Image src={Neo4jImg} />
+          <Neo4jImage/>
           <Explanation>
             <p className="title">ccccLP</p>
             <p>Coding/Gatsby</p>
