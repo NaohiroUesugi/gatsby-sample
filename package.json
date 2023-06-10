@@ -14,7 +14,7 @@
     "@types/styled-components": "^4.1.19",
     "babel-plugin-styled-components": "^1.10.6",
     "chart.js": "^2.9.1",
-    "gatsby": "^2.16.1",
+    "gatsby": "^4.25.7",
     "gatsby-image": "^2.2.29",
     "gatsby-plugin-manifest": "^2.2.23",
     "gatsby-plugin-offline": "^3.0.16",
